@@ -1,0 +1,7 @@
+{
+  "name": "Calzone",
+  "ingredients": "Tomato sauce, Cheese, Ham, Mushroom",
+  "price": {
+    "USD": 7.99
+  }
+}
