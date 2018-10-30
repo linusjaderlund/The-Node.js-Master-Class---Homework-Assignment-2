@@ -16,3 +16,4 @@ app.init = () => {
 
 // app initialization
 app.init();
+
