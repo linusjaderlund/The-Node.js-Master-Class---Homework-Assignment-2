@@ -1,0 +1,19 @@
+form {}
+
+input, button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+input {
+  display: block;
+  width: 250px;
+  padding: 8px 8px;
+  margin: 2px 0 10px;
+}
+
+.login-content {
+  width: 250px;
+  margin: auto;
+}
