@@ -1,7 +1,13 @@
 (function(app) {
   const login = (form, payload) => {
     app.xhr(form.method, form.action, payload, (status, data) => {
-      console.log(status, data);
+      if (status === 200) {
+        // redirect
+        console.log('Woooooopdiwoooo!!');
+        return;
+      }
+
+      console.log('You shall not pass!');
     });
   };
 
