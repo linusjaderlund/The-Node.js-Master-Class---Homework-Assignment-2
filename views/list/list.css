@@ -1,0 +1,22 @@
+.list-table {
+  width: 100%;
+  margin-top: 30px;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #eee;
+}
+
+.list-table__column {
+  text-align: left;
+  padding: 2px 0;
+  border-top: 1px solid #eee;
+}
+
+.list-table__column--right {
+  text-align: right;
+}
+
+.list-table__head__column {
+  text-transform: uppercase;
+  color: magenta;
+  border: 0;
+}
