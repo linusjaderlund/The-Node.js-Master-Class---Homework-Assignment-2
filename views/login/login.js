@@ -3,11 +3,11 @@
     app.xhr(form.method, form.action, payload, (status, data) => {
       if (status === 200) {
         // redirect
-        console.log('Woooooopdiwoooo!!');
+        app.token.set(data);
         return;
       }
 
-      console.log('You shall not pass!');
+      app.token.set('');
     });
   };
 
