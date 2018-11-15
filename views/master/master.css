@@ -1,3 +1,6 @@
+body.authorized .hide-on-authorized {display: none;}
+body.unauthorized .show-on-authorized {display: none;}
+
 .container {
   display: flex;
   flex-flow: column;
@@ -33,6 +36,10 @@
   text-transform: uppercase;
 }
 
+.main-title__link {
+  text-decoration: none;
+}
+
 .menu {
   display: flex;
   font-size: 1.8rem;
@@ -43,14 +50,13 @@
 
 .menu__link {
   display: block;
-  color: #333;
   text-decoration: none;
   margin-left: 10px;
 }
 
 .menu__link:hover {
-  color: #111;
-  text-decoration: underline;
+  /* color: #111; */
+  /* text-decoration: underline; */
 }
 
 .content {

@@ -14,17 +14,20 @@
 
 <div class="container">
     <div class="header">
-      <h1 class="main-title">Pizza Guy</h1>
+      <h1 class="main-title"><a class="main-title__link" href="/">Pizza Guy</a></h1>
       <ul class="menu">
-        <li class="menu__item">
-          <a href="/" class="menu__link">Home</a>
+        <li class="menu__item show-on-authorized">
+          <a href="/" class="menu__link">Menu</a>
         </li>
-        <li class="menu__item">
+        <li class="menu__item show-on-authorized">
           <a href="cart" class="menu__link">Cart</a>
         </li>
-        <li class="menu__item">
-            <a href="login" class="menu__link">Login</a>
-          </li>
+        <li class="menu__item hide-on-authorized">
+          <a href="login" class="menu__link">Login</a>
+        </li>
+        <li class="menu__item show-on-authorized">
+          <a href="logout" class="menu__link [ js-logout-button ]">Logout</a>
+        </li>
       </ul>
     </div>
 
