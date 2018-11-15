@@ -2,8 +2,8 @@
   const login = (form, payload) => {
     app.xhr(form.method, form.action, payload, (status, data) => {
       if (status === 200) {
-        // redirect
         app.token.set(data);
+        window.location.href = '/';
         return;
       }
 
