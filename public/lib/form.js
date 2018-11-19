@@ -9,13 +9,17 @@
     }
   };
 
-  const parse = (form) => {
+  const parse = (form, isOutsideCaller) => {
     const payload = {};
 
     for (const element of form) {
       if (element.tagName === 'INPUT' && element.name) {
         payload[element.name] = element.value;
       }
+    }
+
+    if (isOutsideCaller) {
+      return payload;
     }
 
     publish(form.name, form, payload);
@@ -40,6 +44,9 @@
 
   // public methods
   app.form = {};
+  app.form.parse = (form) => {
+    return parse(form, true);
+  };
 
   app.form.subscribe = (name, callback) => {
     subs[name] = subs[name] || [];
