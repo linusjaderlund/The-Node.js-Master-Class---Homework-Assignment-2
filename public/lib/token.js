@@ -38,6 +38,7 @@
     app.xhr('put', 'api/token', {extend: true}, (status, data) => {
       if (status === 200) {
         setToken(data);
+        keepAlive();
         console.log('[JWT] new token:', data);
         return;
       }
@@ -45,6 +46,11 @@
       setToken('');
       redirectLogin();
     });
+  };
+
+  const keepAlive = () => {
+    console.log('[JWT] keeping token alive, next update in 1 minute...');
+    setTimeout(updateToken, 1000 * 60);
   };
 
   const init = () => {
@@ -66,6 +72,7 @@
   app.token.update = updateToken;
   app.token.subscribe = subscribe;
   app.token.redirect = redirectLogin;
+  app.token.keepAlive = keepAlive;
 
   init();
 }(window.app = window.app || {}));

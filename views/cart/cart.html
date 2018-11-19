@@ -1,0 +1,20 @@
+<h2>Your cart</h2>
+<table class="list-table">
+  <tr class="list-table__head">
+    <th class="list-table__head__column list-table__column">Pizza</th>
+    <th class="list-table__head__column list-table__column">Topping</th>
+    <th class="list-table__head__column list-table__column list-table__column--right">Amount</th>
+    <th class="list-table__head__column list-table__column list-table__column--right">Price</th>
+    <th>&nbsp;</th>
+  </tr>
+  <tbody class="list-table__body [ js-list-table ]"></tbody>
+</table>
+
+<h2>Pay for your pizzas</h2>
+<form method="POST" action="api/pay" class="payment" name="payment">
+  <label>Card number
+    <input type="text" name="cardNumber">
+  </label>
+  <input type="hidden" name="amount" value="100">
+  <button type="submit">Send payment</button>
+</form>

@@ -3,6 +3,7 @@
     app.xhr(form.method, form.action, payload, (status, data) => {
       if (status === 200) {
         app.token.set(data);
+        app.token.keepAlive();
         window.location.href = '/';
         return;
       }
